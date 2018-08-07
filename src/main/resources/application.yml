@@ -14,15 +14,15 @@ api:
 app:
   tee.tmp.dir: /workspace
   gk:
-    host: gk
-    base.url: http://qual-sp-bcn.5gtango.eu:32002/api/v3
+    host: ${app_gk_base_url}
+    base.url: http://${app.gk.host}:32002/api/v3
     session:
       endpoint: ${app.gk.base.url}/sessions
       username: sonata
       password: 1234
   vnvgk:
-    host: gk
-    base.url: http://pre-int-vnv-bcn.5gtango.eu:32002/api/v3
+    host: tng-api-gtw
+    base.url: http://${app.vnvgk.host}:5000/api/v3
   cat:
     host: tng-cat
     base.url: http://${app.cat.host}:4011/api/catalogues/v2
